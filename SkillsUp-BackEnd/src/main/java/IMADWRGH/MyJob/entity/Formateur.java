@@ -20,7 +20,7 @@ public class Formateur extends User{
     private String demaineExperter;
 
 
-    /// Relation avec Evaluation
+    /// Relation avec Evaluation *** Bidirectional association
     @OneToMany(mappedBy = "formateur" ,cascade = CascadeType.ALL)
     private List<Evaluation> evaluationList;
 
