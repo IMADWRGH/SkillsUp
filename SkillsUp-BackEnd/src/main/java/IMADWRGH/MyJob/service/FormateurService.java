@@ -6,7 +6,6 @@ import IMADWRGH.MyJob.Exception.UserException;
 import IMADWRGH.MyJob.Repository.FormateurRepositoty;
 import IMADWRGH.MyJob.entity.Formateur;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -39,8 +38,12 @@ public class FormateurService {
 
 
     //// function of CRUD
+
+    public Formateur create(Formateur formateur){
+        return formateurRepositoty.save(formateur);
+    }
     public Formateur getFormateur(int id){
-        return formateurRepositoty.findById(id).get();
+        return formateurRepositoty.findById(id).orElse(null);
     }
 
     public  Formateur update(Formateur formateur){
