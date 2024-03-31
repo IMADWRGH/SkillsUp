@@ -2,8 +2,6 @@ package IMADWRGH.MyJob.Controller.Auth;
 
 import IMADWRGH.MyJob.Controller.Model.*;
 import IMADWRGH.MyJob.Exception.UserException;
-import IMADWRGH.MyJob.entity.Offer;
-import IMADWRGH.MyJob.entity.Recruteur;
 import IMADWRGH.MyJob.entity.User;
 import IMADWRGH.MyJob.service.CandidatService;
 import IMADWRGH.MyJob.service.FormateurService;
@@ -12,7 +10,6 @@ import IMADWRGH.MyJob.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
